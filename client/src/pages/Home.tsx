@@ -102,7 +102,11 @@ export default function Home() {
             <div className="w-8 h-8 bg-gradient-to-br from-accent to-accent/60 rounded-lg flex items-center justify-center">
               <span className="text-accent-foreground font-bold text-lg">B</span>
             </div>
-            <h1 className="text-xl font-bold text-foreground">BlendedSkill</h1>
+            <img
+  src="/blendedskill-logo.jpg"
+  alt="BlendedSkill Logo"
+  className="h-12 w-auto object-contain"
+/>
           </div>
 
           <div className="flex items-center gap-4">
