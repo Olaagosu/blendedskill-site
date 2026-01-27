@@ -97,7 +97,7 @@ export default function Home() {
 
       {/* Navigation Header */}
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur border-b border-border">
-        <nav className="container flex items-center justify-between py-4">
+        <nav className="container flex flex-col md:flex-row md:items-center md:justify-between gap-3 py-4">
      <div className="flex items-center">
   <img
     src="/blendedskill-logo.jpg"
