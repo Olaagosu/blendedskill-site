@@ -97,33 +97,46 @@ export default function Home() {
 
       {/* Navigation Header */}
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur border-b border-border">
-        <nav className="container flex flex-col md:flex-row md:items-center md:justify-between gap-3 py-4">
-     <div className="flex items-center">
-  <img
-  src={`${import.meta.env.BASE_URL}images/logo.jpg`}
-  alt="BlendedSkill"
-  className="h-12 md:h-14 w-auto max-w-[260px] object-contain"
-/>
-          
-          <div className="flex items-center gap-4">
-            <a href="#tracks" className="text-sm font-medium hover:text-accent transition-colors">
-              Tracks
-            </a>
-            <a href="#how" className="text-sm font-medium hover:text-accent transition-colors">
-              How It Works
-            </a>
-            <Button
-              variant="default"
-              size="sm"
-              className="bg-accent text-accent-foreground hover:shadow-lg"
-              onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Get Started
-            </Button>
-          </div>
-        </nav>
-      </header>
+  <nav className="container flex flex-col md:flex-row md:items-center md:justify-between gap-3 py-4">
+    {/* LEFT: Logo */}
+    <div className="flex items-center">
+      <img
+        src={`${import.meta.env.BASE_URL}blendedskill-logo.jpg`}
+        alt="BlendedSkill"
+        className="h-14 md:h-16 w-auto object-contain"
+      />
+    </div>
 
+    {/* RIGHT: Links + Button */}
+    <div className="flex items-center gap-4">
+      <a
+        href="#tracks"
+        className="text-sm font-medium hover:text-accent transition-colors"
+      >
+        Tracks
+      </a>
+
+      <a
+        href="#how"
+        className="text-sm font-medium hover:text-accent transition-colors"
+      >
+        How It Works
+      </a>
+
+      <Button
+        variant="default"
+        size="sm"
+        className="bg-accent text-accent-foreground hover:shadow-lg"
+        onClick={() =>
+          document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })
+        }
+      >
+        Get Started
+      </Button>
+    </div>
+  </nav>
+</header>
+      
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="hero relative">
