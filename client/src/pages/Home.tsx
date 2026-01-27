@@ -100,11 +100,10 @@ export default function Home() {
         <nav className="container flex flex-col md:flex-row md:items-center md:justify-between gap-3 py-4">
      <div className="flex items-center">
   <img
-    src="/blendedskill-logo.jpg"
-    alt="BlendedSkill"
-    className="h-10 md:h-12 w-auto object-contain"
-  />
-</div>
+  src={`${import.meta.env.BASE_URL}images/logo.jpg`}
+  alt="BlendedSkill"
+  className="h-12 md:h-14 w-auto max-w-[260px] object-contain"
+/>
           
           <div className="flex items-center gap-4">
             <a href="#tracks" className="text-sm font-medium hover:text-accent transition-colors">
