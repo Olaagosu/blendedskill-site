@@ -98,17 +98,14 @@ export default function Home() {
       {/* Navigation Header */}
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur border-b border-border">
         <nav className="container flex items-center justify-between py-4">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-accent to-accent/60 rounded-lg flex items-center justify-center">
-              <span className="text-accent-foreground font-bold text-lg">B</span>
-            </div>
-            <img
-  src="/blendedskill-logo.jpg"
-  alt="BlendedSkill Logo"
-  className="h-12 w-auto object-contain"
-/>
-          </div>
-
+     <div className="flex items-center">
+  <img
+    src="/blendedskill-logo.jpg"
+    alt="BlendedSkill"
+    className="h-10 md:h-12 w-auto object-contain"
+  />
+</div>
+          
           <div className="flex items-center gap-4">
             <a href="#tracks" className="text-sm font-medium hover:text-accent transition-colors">
               Tracks
