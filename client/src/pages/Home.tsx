@@ -139,19 +139,18 @@ export default function Home() {
       
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-       <section
-  className="relative bg-cover bg-center min-h-[85vh] flex items-center"
+     <section
+  className="relative min-h-[85vh] flex items-center bg-cover bg-center"
   style={{
     backgroundImage: "url('/images/hero-background.png')",
   }}
 >
-         
-<div className="absolute inset-0 bg-black/50"></div>
-         
+  {/* Dark overlay */}
+       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>  
         <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left: Content */}
-              <div className="space-y-6">
+             <div className="container relative z-10">
                 <div className="badge">Professional certificates • Career-focused learning</div>
 
                 <h1 className="text-5xl md:text-6xl font-bold leading-tight text-foreground">
