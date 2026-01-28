@@ -139,8 +139,16 @@ export default function Home() {
       
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section className="hero relative">
-          <div className="container">
+       <section
+  className="relative bg-cover bg-center min-h-[85vh] flex items-center"
+  style={{
+    backgroundImage: "url('/images/hero-background.png')",
+  }}
+>
+         
+<div className="absolute inset-0 bg-black/50"></div>
+         
+        <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left: Content */}
               <div className="space-y-6">
