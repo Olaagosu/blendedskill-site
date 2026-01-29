@@ -138,18 +138,18 @@ export default function Home() {
 </header>
       
       <main id="main-content" className="flex-1">
-        {/* Hero Section */}
-    <section
-  className="relative min-h-[85vh] flex items-center bg-cover bg-center overflow-hidden"
-  style={{
-    backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-background.png)`,
-  }}
->
-  {/* Overlay: stronger on left for text readability, lighter on right to keep image visible */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/15" />
+              {/* Hero Section */}
+      <section
+  className="relative min-h-[85vh] flex items-center bg-cover bg-center"
+ style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/hero-background.png')` }}
 
-  {/* Optional: a subtle overall tint (keep this light). Remove if you want the image even brighter */}
-  <div className="absolute inset-0 bg-black/10" />
+>
+  {/* Overlay: light tint over whole image */}
+  <div className="absolute inset-0 bg-black/25"></div>
+
+  {/* Overlay: stronger gradient on the LEFT for text readability */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-transparent"></div>
+
   <div className="container relative z-10">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* Left: Content */}
@@ -162,8 +162,7 @@ export default function Home() {
           Build job-ready skills with proof employers respect.
         </h1>
 
-      <p className="text-lg text-white/85 leading-relaxed">
-
+        <p className="text-lg text-white/85 leading-relaxed max-w-xl">
           BlendedSkill delivers structured learning tracks, applied projects, and
           certificates designed to help you stand out in hiring conversations and
           advance your career.
@@ -193,45 +192,46 @@ export default function Home() {
       <div className="hidden lg:block" />
     </div>
   </div>
-<div className="flex flex-col sm:flex-row gap-4 pt-4">
-  <Button
-    size="lg"
-    className="bg-accent text-accent-foreground hover:shadow-lg hover:bg-opacity-90"
-  >
-    Explore Learning Tracks <ArrowRight className="ml-2 w-4 h-4" />
-  </Button>
+</section>
 
-  <Button size="lg" variant="outline" className="border-2 border-border">
-    Join Early Access
-  </Button>
-</div>
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <Button
+                  size="lg"
+                  className="bg-accent text-accent-foreground hover:shadow-lg hover:bg-opacity-90"
+                  onClick={() => document.getElementById("tracks")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Explore Learning Tracks <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
 
-              {/* Right: Visual Element */}
-              <div className="relative h-96 lg:h-full hidden lg:flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-3xl blur-3xl" />
-                <div className="relative z-10 text-center space-y-8">
-                  <div className="inline-flex items-center justify-center w-24 h-24 bg-accent/10 rounded-full border-2 border-accent/30">
-                    <BookOpen className="w-12 h-12 text-accent" />
-                  </div>
-                  <p className="text-sm font-semibold text-accent">Structured Learning Paths</p>
-                </div>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white/40 text-white hover:bg-white/10"
+                  onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Join Early Access
+                </Button>
               </div>
             </div>
 
-            {/* KPI Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16 pt-16 border-t border-border">
-              {benefits.map((benefit, idx) => (
-                <div key={idx} className="space-y-2 text-center">
-                  <h3 className="font-semibold text-foreground">{benefit.title}</h3>
-                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
+            {/* Right: keep empty so the photo stays clean (no logo overlay) */}
+            <div className="hidden lg:block" />
           </div>
-        </section>
 
-        {/* Divider */}
-        <div className="divider-diagonal" />
+          {/* KPI Row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16 pt-10 border-t border-white/15">
+            {benefits.map((benefit, idx) => (
+              <div key={idx} className="space-y-2 text-left">
+                <h3 className="font-semibold text-white">{benefit.title}</h3>
+                <p className="text-sm text-white/75">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="divider-diagonal" />
 
         {/* Featured Tracks Section */}
         <section id="tracks" className="section bg-gradient-to-b from-secondary/5 to-background">
