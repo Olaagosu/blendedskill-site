@@ -210,13 +210,11 @@ export default function Home() {
                   onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Join Early Access
-                </Button>
-              </div>
-            </div>
+             </Button>
+</div>
 
-            {/* Right: keep empty so the photo stays clean (no logo overlay) */}
-            <div className="hidden lg:block" />
-          </div>
+{/* Right: keep empty so the photo stays clean */}
+<div className="hidden lg:block" />
 
           {/* KPI Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16 pt-10 border-t border-white/15">
