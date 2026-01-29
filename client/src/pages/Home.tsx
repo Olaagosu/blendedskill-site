@@ -139,16 +139,17 @@ export default function Home() {
       
       <main id="main-content" className="flex-1">
         {/* Hero Section */}
-     <section
-  className="relative min-h-[85vh] flex items-center bg-cover bg-center"
-  style={{ backgroundImage: "url('/images/hero-background.png')" }}
+    <section
+  className="relative min-h-[85vh] flex items-center bg-cover bg-center overflow-hidden"
+  style={{
+    backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-background.png)`,
+  }}
 >
-  {/* Overlay: light tint over whole image */}
-  <div className="absolute inset-0 bg-black/25"></div>
+  {/* Overlay: stronger on left for text readability, lighter on right to keep image visible */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/15" />
 
-  {/* Overlay: stronger gradient on the LEFT for text readability */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-transparent"></div>
-
+  {/* Optional: a subtle overall tint (keep this light). Remove if you want the image even brighter */}
+  <div className="absolute inset-0 bg-black/10" />
   <div className="container relative z-10">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* Left: Content */}
@@ -161,7 +162,8 @@ export default function Home() {
           Build job-ready skills with proof employers respect.
         </h1>
 
-        <p className="text-lg text-white/85 leading-relaxed max-w-xl">
+      <p className="text-lg text-white/85 leading-relaxed">
+
           BlendedSkill delivers structured learning tracks, applied projects, and
           certificates designed to help you stand out in hiring conversations and
           advance your career.
