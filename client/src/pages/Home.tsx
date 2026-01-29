@@ -138,61 +138,30 @@ export default function Home() {
 </header>
       
       <main id="main-content" className="flex-1">
-              {/* Hero Section */}
+                   {/* Hero Section */}
       <section
-  className="relative min-h-[85vh] flex items-center bg-cover bg-center"
- style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/hero-background.png')` }}
+        className="relative min-h-[85vh] flex items-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/hero-background.png')" }}
+      >
+        {/* Overlay (makes text readable) */}
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
 
->
-  {/* Overlay: light tint over whole image */}
-  <div className="absolute inset-0 bg-black/25"></div>
+        <div className="container relative z-10 py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm text-white">
+                Professional certificates • Career-focused learning
+              </div>
 
-  {/* Overlay: stronger gradient on the LEFT for text readability */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-transparent"></div>
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
+                Build job-ready skills with proof employers respect.
+              </h1>
 
-  <div className="container relative z-10">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      {/* Left: Content */}
-      <div className="space-y-6">
-        <div className="badge bg-white/15 text-white border border-white/20">
-          Professional certificates • Career-focused learning
-        </div>
-
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
-          Build job-ready skills with proof employers respect.
-        </h1>
-
-        <p className="text-lg text-white/85 leading-relaxed max-w-xl">
-          BlendedSkill delivers structured learning tracks, applied projects, and
-          certificates designed to help you stand out in hiring conversations and
-          advance your career.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 pt-2">
-          <Button
-            size="lg"
-            className="bg-accent text-accent-foreground hover:shadow-lg"
-            onClick={() => document.getElementById("tracks")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Explore Learning Tracks <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
-
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-white/40 text-white hover:bg-white/10"
-            onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Join Early Access
-          </Button>
-        </div>
-      </div>
-
-      {/* Right side intentionally empty to keep the photo clean (no logo overlay) */}
-      <div className="hidden lg:block" />
-    </div>
-  </div>
-</section>
+              <p className="text-lg text-white/85 leading-relaxed max-w-xl">
+                BlendedSkill delivers structured learning tracks, applied projects, and certificates designed to help you stand out in hiring conversations and advance your career.
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button
@@ -210,11 +179,13 @@ export default function Home() {
                   onClick={() => document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Join Early Access
-             </Button>
-</div>
+                </Button>
+              </div>
+            </div>
 
-{/* Right: keep empty so the photo stays clean */}
-<div className="hidden lg:block" />
+            {/* Right: keep empty so the photo stays clean (no logo overlay) */}
+            <div className="hidden lg:block" />
+          </div>
 
           {/* KPI Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16 pt-10 border-t border-white/15">
@@ -230,6 +201,9 @@ export default function Home() {
 
       {/* Divider */}
       <div className="divider-diagonal" />
+
+
+         
 
         {/* Featured Tracks Section */}
         <section id="tracks" className="section bg-gradient-to-b from-secondary/5 to-background">
