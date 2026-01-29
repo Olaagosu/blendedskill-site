@@ -141,12 +141,15 @@ export default function Home() {
                    {/* Hero Section */}
       <section
         className="relative min-h-[85vh] flex items-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-background.png')" }}
+       style={{
+  backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-background.png)`,
+}}
       >
-        {/* Overlay (makes text readable) */}
-       <div className="absolute inset-0 bg-black/20" />
-<div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent" />
+     {/* overlays MUST come before content, and section must be relative */}
+       <div className="absolute inset-0 bg-black/40 z-0" />
+<div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
 
+        {/* content MUST be above overlays */}
         <div className="container relative z-10 py-14">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
