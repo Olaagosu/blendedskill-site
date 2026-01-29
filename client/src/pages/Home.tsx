@@ -193,20 +193,18 @@ export default function Home() {
       <div className="hidden lg:block" />
     </div>
   </div>
-</section>
-                    className="bg-accent text-accent-foreground hover:shadow-lg hover:bg-opacity-90"
-                  >
-                    Explore Learning Tracks <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-border"
-                  >
-                    Join Early Access
-                  </Button>
-                </div>
-              </div>
+<div className="flex flex-col sm:flex-row gap-4 pt-4">
+  <Button
+    size="lg"
+    className="bg-accent text-accent-foreground hover:shadow-lg hover:bg-opacity-90"
+  >
+    Explore Learning Tracks <ArrowRight className="ml-2 w-4 h-4" />
+  </Button>
+
+  <Button size="lg" variant="outline" className="border-2 border-border">
+    Join Early Access
+  </Button>
+</div>
 
               {/* Right: Visual Element */}
               <div className="relative h-96 lg:h-full hidden lg:flex items-center justify-center">
