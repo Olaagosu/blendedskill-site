@@ -144,8 +144,8 @@ export default function Home() {
         style={{ backgroundImage: "url('/images/hero-background.png')" }}
       >
         {/* Overlay (makes text readable) */}
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
+       <div className="absolute inset-0 bg-black/20" />
+<div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/10 to-transparent" />
 
         <div className="container relative z-10 py-14">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
