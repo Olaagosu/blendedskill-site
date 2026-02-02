@@ -314,14 +314,15 @@ export default function Home() {
                   </div>
                 )}
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <a href="#tracks" className="text-accent font-medium hover:underline flex items-center justify-center gap-2">
-                    View Courses <ArrowRight className="w-4 h-4" />
-                  </a>
-                  <a href="mailto:hello@blendedskill.com" className="text-accent font-medium hover:underline flex items-center justify-center gap-2">
-                    Contact Us <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
+               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+  <a
+    href="#tracks"
+    className="text-accent font-medium hover:underline flex items-center justify-center gap-2"
+  >
+    View Courses <ArrowRight className="w-4 h-4" />
+  </a>
+</div>
+
               </div>
             </div>
           </div>
@@ -344,7 +345,37 @@ export default function Home() {
               </p>
             </div>
 
-            <nav className="flex gap-8">
+           <nav className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+  <div className="space-y-3">
+    <p className="font-semibold">About</p>
+    <a href="/about" className="hover:text-accent transition-colors">About Us</a>
+    <a href="/careers" className="hover:text-accent transition-colors">Careers</a>
+    <a href="/contact" className="hover:text-accent transition-colors">Contact Us</a>
+    <a href="/blog" className="hover:text-accent transition-colors">Blog</a>
+  </div>
+
+  <div className="space-y-3">
+    <p className="font-semibold">Discover</p>
+    <a href="#tracks" className="hover:text-accent transition-colors">View Courses</a>
+    <a href="/pricing" className="hover:text-accent transition-colors">Plans & Pricing</a>
+    <a href="/faq" className="hover:text-accent transition-colors">Help & Support</a>
+  </div>
+
+  <div className="space-y-3">
+    <p className="font-semibold">Legal</p>
+    <a href="/accessibility" className="hover:text-accent transition-colors">Accessibility Statement</a>
+    <a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a>
+    <a href="/terms" className="hover:text-accent transition-colors">Terms</a>
+    <a href="/sitemap" className="hover:text-accent transition-colors">Sitemap</a>
+  </div>
+
+  <div className="space-y-3">
+    <p className="font-semibold">Company</p>
+    <a href="/investors" className="hover:text-accent transition-colors">Investors</a>
+    <a href="/testimonials" className="hover:text-accent transition-colors">Testimonials</a>
+  </div>
+</nav>
+
               <a href="#tracks" className="text-sm font-medium hover:text-accent transition-colors">
                 Tracks
               </a>
