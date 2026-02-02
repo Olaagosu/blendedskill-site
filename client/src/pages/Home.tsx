@@ -330,65 +330,58 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-card text-card-foreground border-t border-border">
-        <div className="container py-12">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-accent to-accent/60 rounded-lg flex items-center justify-center">
-                  <span className="text-accent-foreground font-bold text-lg">B</span>
-                </div>
-                <span className="font-bold">BlendedSkill</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} BlendedSkill. All rights reserved.
-              </p>
-            </div>
-
-           <nav className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
-  <div className="space-y-3">
-    <p className="font-semibold">About</p>
-    <a href="/about" className="hover:text-accent transition-colors">About Us</a>
-    <a href="/careers" className="hover:text-accent transition-colors">Careers</a>
-    <a href="/contact" className="hover:text-accent transition-colors">Contact Us</a>
-    <a href="/blog" className="hover:text-accent transition-colors">Blog</a>
-  </div>
-
-  <div className="space-y-3">
-    <p className="font-semibold">Discover</p>
-    <a href="#tracks" className="hover:text-accent transition-colors">View Courses</a>
-    <a href="/pricing" className="hover:text-accent transition-colors">Plans & Pricing</a>
-    <a href="/faq" className="hover:text-accent transition-colors">Help & Support</a>
-  </div>
-
-  <div className="space-y-3">
-    <p className="font-semibold">Legal</p>
-    <a href="/accessibility" className="hover:text-accent transition-colors">Accessibility Statement</a>
-    <a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a>
-    <a href="/terms" className="hover:text-accent transition-colors">Terms</a>
-    <a href="/sitemap" className="hover:text-accent transition-colors">Sitemap</a>
-  </div>
-
-  <div className="space-y-3">
-    <p className="font-semibold">Company</p>
-    <a href="/investors" className="hover:text-accent transition-colors">Investors</a>
-    <a href="/testimonials" className="hover:text-accent transition-colors">Testimonials</a>
-  </div>
-</nav>
-
-              <a href="#tracks" className="text-sm font-medium hover:text-accent transition-colors">
-                Tracks
-              </a>
-              <a href="#how" className="text-sm font-medium hover:text-accent transition-colors">
-                How It Works
-              </a>
-              <a href="#cta" className="text-sm font-medium hover:text-accent transition-colors">
-                Get Started
-              </a>
-            </nav>
+<footer className="bg-card text-card-foreground border-t border-border">
+  <div className="container py-12">
+    <div className="grid gap-10 md:grid-cols-2 md:items-start">
+      {/* Brand */}
+      <div className="space-y-3">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 bg-gradient-to-br from-accent to-accent/60 rounded-lg flex items-center justify-center">
+            <span className="text-accent-foreground font-bold text-lg">B</span>
           </div>
+          <span className="font-bold">BlendedSkill</span>
         </div>
-      </footer>
+        <p className="text-sm text-muted-foreground max-w-sm">
+          Career-focused learning tracks with practical projects and certificates you can use in interviews.
+        </p>
+        <p className="text-sm text-muted-foreground">
+          © {new Date().getFullYear()} BlendedSkill. All rights reserved.
+        </p>
+      </div>
+
+      {/* Links */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+        <div className="space-y-3">
+          <p className="font-semibold">About</p>
+          <a href="/about" className="block hover:text-accent transition-colors">About Us</a>
+          <a href="/contact" className="block hover:text-accent transition-colors">Contact Us</a>
+        </div>
+
+        <div className="space-y-3">
+          <p className="font-semibold">Discover</p>
+          <a href="#tracks" className="block hover:text-accent transition-colors">View Courses</a>
+          <a href="/pricing" className="block hover:text-accent transition-colors">Plans & Pricing</a>
+          <a href="/faq" className="block hover:text-accent transition-colors">Help & Support</a>
+        </div>
+
+        <div className="space-y-3">
+          <p className="font-semibold">Legal</p>
+          <a href="/privacy" className="block hover:text-accent transition-colors">Privacy Policy</a>
+          <a href="/terms" className="block hover:text-accent transition-colors">Terms</a>
+          <a href="/accessibility" className="block hover:text-accent transition-colors">Accessibility</a>
+          <a href="/sitemap" className="block hover:text-accent transition-colors">Sitemap</a>
+        </div>
+
+        <div className="space-y-3">
+          <p className="font-semibold">Company</p>
+          <a href="/testimonials" className="block hover:text-accent transition-colors">Testimonials</a>
+          <a href="mailto:hello@blendedskill.com" className="block hover:text-accent transition-colors">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
